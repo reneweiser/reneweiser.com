@@ -1,0 +1,33 @@
+$clay: #272822;
+$lightClay: #3a3b35;
+$orchid: #f92672;
+$sky: #66d9ef;
+$lime: #a6e22e;
+$pumpkin: #fd971f;
+
+$colors: (
+  "clay": $clay,
+  "lightclay": $lightClay,
+  "orchid": $orchid,
+  "sky": $sky,
+  "lime": $lime,
+  "pumpkin": $pumpkin,
+  "black": #000,
+  "white": #fff,
+);
+
+@each $name, $color in $colors {
+  .text-color- {
+    &#{$name} {
+      color: #{$color};
+    }
+  }
+}
+
+@each $name, $color in $colors {
+  .bg-color- {
+    &#{$name} {
+      background-color: #{$color};
+    }
+  }
+}

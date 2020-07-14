@@ -1,0 +1,11 @@
+@for $i from 1 through 10 {
+  .h-#{$i} {
+    height: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 10 {
+  .w-#{$i} {
+    width: #{$i}rem;
+  }
+}

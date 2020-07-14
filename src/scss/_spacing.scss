@@ -1,0 +1,11 @@
+@for $i from 0 through 5 {
+  .p-#{$i} {
+    padding: #{$i / 4}rem;
+  }
+}
+
+@for $i from 0 through 5 {
+  .m-#{$i} {
+    margin: #{$i / 4}rem;
+  }
+}
