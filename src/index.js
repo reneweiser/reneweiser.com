@@ -1,4 +1,2 @@
-import "./scss/style.scss";
-import "purecss";
-
+import "./css/style.css";
 import "./images/sp-rene.png";

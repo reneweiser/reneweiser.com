@@ -11,11 +11,17 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              plugins: [require("tailwindcss"), require("autoprefixer")],
+            },
+          },
+        ],
       },
       {
         test: /\.(jpe?g|png)$/,
