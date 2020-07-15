@@ -2,4 +2,18 @@
 
 @tailwind components;
 
+.paragraph-link {
+  @apply text-lime transition-colors duration-200;
+}
+.paragraph-link:hover {
+  @apply text-lime-lighter;
+}
+.btn {
+  @apply bg-clay-lighter text-white transition-colors duration-200 font-bold mx-2 py-2 px-4
+    rounded-full;
+}
+.btn:hover {
+  @apply bg-lime text-clay;
+}
+
 @tailwind utilities;
