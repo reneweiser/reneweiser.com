@@ -2,6 +2,10 @@
 
 @tailwind components;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .paragraph-link {
   @apply text-lime transition-colors duration-200;
 }
@@ -14,6 +18,40 @@
 }
 .btn:hover {
   @apply bg-lime text-clay;
+}
+
+.ball {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+.bounce {
+  animation-name: bounce-keys;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+@keyframes bounce-keys {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-25px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 @tailwind utilities;
